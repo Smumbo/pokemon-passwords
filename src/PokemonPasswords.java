@@ -1,5 +1,3 @@
-package com.pp;
-
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
@@ -31,6 +29,7 @@ import java.util.Scanner;
  */
 public class PokemonPasswords {
   public static void main(String[] args) {
+    Scanner pokemonNames = openFile(args[2]);
     // test comment
   }
 
@@ -44,7 +43,7 @@ public class PokemonPasswords {
    *         is the Scanner containing the input file.
    *
    */
-  public static Scanner openFile(String fileName) {
+  private static Scanner openFile(String fileName) {
     Scanner file = null;
     try {
       file = new Scanner(new File(fileName));
