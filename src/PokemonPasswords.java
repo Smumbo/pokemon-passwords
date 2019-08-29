@@ -11,7 +11,7 @@ import java.util.Scanner;
  * USAGE:
  * inputWords inputSymbols inputPokemonNames
  *
- * Where the input files are .txt files with one term per line, like so:
+ * Where the input files are .in or .txt files with one term per line, like so:
  * ------------------ infile ------------------
  * ...
  * Chansey
@@ -28,20 +28,18 @@ import java.util.Scanner;
  * --------------------------------------------
  */
 public class PokemonPasswords {
+
   public static void main(String[] args) {
     Scanner pokemonNames = openFile(args[2]);
     // test comment
   }
 
   /**
-   * Purpose: Creates input file Scanner using input fileName
+   * Creates input file Scanner using input fileName
    *
-   * @param fileName
-   *            is the name of the file to open.
+   * @param fileName the name of the file to open.
    *
-   * @return file
-   *         is the Scanner containing the input file.
-   *
+   * @return file – a Scanner containing the input file.
    */
   private static Scanner openFile(String fileName) {
     Scanner file = null;
@@ -51,5 +49,9 @@ public class PokemonPasswords {
       error.printStackTrace();
     }
     return file;
+  }
+
+  private static String[] readFile(Scanner file) {
+    return null;
   }
 }
