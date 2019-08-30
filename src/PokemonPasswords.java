@@ -36,6 +36,8 @@ public class PokemonPasswords {
     Scanner wordsFile = openFile(args[0]);
     Scanner symbolsFile = openFile(args[1]);
     Scanner pokemonNamesFile = openFile(args[2]);
+    List<String> words = readFile(wordsFile);
+    List<String> symbols = readFile(symbolsFile);
     List<String> pokemonNames = readFile(pokemonNamesFile);
   }
 
