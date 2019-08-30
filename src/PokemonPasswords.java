@@ -43,11 +43,25 @@ public class PokemonPasswords {
     List<String> symbols = readFile(symbolsFile);
     List<String> pokemonNames = readFile(pokemonNamesFile);
 
-    // Get random elements
-    String randWord = randomElement(words);
-    String randSymbol = randomElement(symbols);
-    String randPokemon = randomElement(pokemonNames);
-    String randNumber = Integer.toString(new Random().nextInt(99));
+    // Build passwords
+    System.out.println("Generating passwords.");
+    System.out.println("Press ENTER to generate new password. Type STOP to quit.\n");
+    Scanner sc = new Scanner(System.in);
+    String input = sc.nextLine();
+    while (!input.toUpperCase().equals("STOP")) {
+      // Get random elements
+      String randWord = randomElement(words);
+      String randSymbol = randomElement(symbols);
+      String randPokemon = randomElement(pokemonNames);
+      String randNumber = Integer.toString(new Random().nextInt(99));
+
+      // Print random password
+      String password = randWord + randSymbol + randPokemon + randSymbol + randNumber;
+      System.out.println(password);
+
+      // Get next line of console input
+      input = sc.nextLine();
+    }
   }
 
   /**
